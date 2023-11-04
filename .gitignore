@@ -1,0 +1,12 @@
+__pycache__/
+
+# Ignore Python bytecode files
+*.pyc
+*.pyo
+
+artifacts/
+dataset/
+conda/
+env/
+log/
+saved/

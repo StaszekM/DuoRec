@@ -1,3 +1,29 @@
+# Notes by StaszekM:
+
+For our assignment, we use only our own data, not any samples proposed by the authors
+
+
+
+1. Put `file_cutoff.pkl` and `metadata_with_embeddings.pkl` inside `./artifacts`
+2. Run `transform_artifacts.ipynb`
+3. Rename the resulting CSVs to `rekomDataset.inter` and `rekomDataset.item`
+4. Put these files to the directory as shown below
+
+```
+$ tree
+.
+├── rekomDataset
+│   ├── rekomDataset.inter
+│   └── rekomDataset.item
+
+```
+
+5. Run your training with:
+6. 
+```
+$ python run_seq.py --dataset='rekomDataset' --train_batch_size=256 --lmd=0.1 --lmd_sem=0.1 --model='CL4SRec' --contrast='us_x' --sim='dot' --tau=1
+```
+
 # DuoRec
 Code for WSDM 2022 paper, [Contrastive Learning for Representation Degeneration Problem in Sequential Recommendation](https://arxiv.org/abs/2110.05730).
 
